@@ -51,3 +51,27 @@
 // console.log(isWeekend("2022-02-12")); // true
 // console.log(isWeekend("2022-02-13")); // true
 // console.log(isWeekend("2022-02-09")); // false
+
+// // 4
+// const person = {
+//   fullName: "Sherlock Holmes",
+//   address: {
+//     street: "Baker Street",
+//     city: "London",
+//     house: "221b",
+//   },
+// };
+
+// const stringedPerson = JSON.stringify(person);
+
+// const parsedPerson = JSON.parse(stringedPerson);
+
+// const {
+//   fullName,
+//   address: { street, city, house },
+// } = parsedPerson;
+
+// console.log(person);
+// console.log(stringedPerson);
+// console.log(parsedPerson);
+// console.log(fullName, street, city, house);
