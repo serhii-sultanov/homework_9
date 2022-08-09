@@ -17,21 +17,25 @@
 
 // // 2
 // function getDiffDays(startDate, endDate) {
-//   const OneDayToMilliseconds = 24 * 60 * 60 * 1000;
+//   const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
 
 //   let userStartDate = new Date(startDate);
 //   let userEndDate = new Date(endDate);
 
-//   let convertedUserStartDate = userStartDate.getTime() / OneDayToMilliseconds;
-//   let convertedUserEndDate = userEndDate.getTime() / OneDayToMilliseconds;
+//   if (isNaN(userStartDate) || isNaN(userEndDate)) {
+//     console.error("Error: invalid date");
+//     return;
+//   } else if (userEndDate < userStartDate) {
+//     console.error("Error: your start date is later than end");
+//     return;
+//   }
+
+//   let convertedUserStartDate =
+//     userStartDate.getTime() / ONE_DAY_IN_MILLISECONDS;
+//   let convertedUserEndDate = userEndDate.getTime() / ONE_DAY_IN_MILLISECONDS;
 
 //   const differentDays = convertedUserEndDate - convertedUserStartDate;
 
-//   if (isNaN(userStartDate) || isNaN(userEndDate)) {
-//     return "Error: invalid date";
-//   } else if (convertedUserEndDate < convertedUserStartDate) {
-//     return "Error: your start date is later than end";
-//   }
 //   return differentDays;
 // }
 
@@ -43,11 +47,9 @@
 // // 3
 // function isWeekend(date) {
 //   let userDay = new Date(date).getDay();
-//   if (userDay === 0 || userDay === 6) {
-//     return true;
-//   }
-//   return false;
+//   return userDay === 0 || userDay === 6;
 // }
+
 // console.log(isWeekend("2022-02-12")); // true
 // console.log(isWeekend("2022-02-13")); // true
 // console.log(isWeekend("2022-02-09")); // false
